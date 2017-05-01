@@ -42,6 +42,22 @@ And if you need some more power, you can invert the behavior of a selector:
 <Matches sm={false}>I match only when `sm` isn't matching</Matches>
 ```
 
+## Docs
+
+The `queries` property is an object with a list of properties of your choice,
+you can name them how you prefer, for instance, you could have `sm` or `small` or
+`verySmallMatcher`.  
+Each property contains an object with one or more expressions..
+
+So far, the supported expressions are: `maxWidth`, `minWidth`, `maxHeight` and
+`minHeight`.
+
+Once you have defined your element queries, you can use the `<Matches />` component
+to conditionally render a piece of UI.  
+Simply add to it one or more element queries names to tell it to display its content
+when at least one of the matches the given expressions.
+
+
 # Credits
 
 Full credits to the original idea to [@souporserious](https://github.com/souporserious).
