@@ -46,8 +46,13 @@ And if you need some more power, you can invert the behavior of a selector:
 
 The `queries` property is an object with a list of properties of your choice,
 you can name them how you prefer, for instance, you could have `sm` or `small` or
-`verySmallMatcher`.  
-Each property contains an object with one or more expressions..
+`verySmallMatcher`:
+
+- `{ sm: { maxWidth: 10 } }`
+- `{ small: { maxWidth: 100, minWidth: 20 } }`
+- `{ verySmallMatcher: { maxWidth: 10, minHeight: 30 } }`
+
+Each property contains an object with one or more expressions.
 
 So far, the supported expressions are: `maxWidth`, `minWidth`, `maxHeight` and
 `minHeight`.
