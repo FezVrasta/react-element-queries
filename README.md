@@ -7,6 +7,14 @@ The best thing? It weights 600 bytes gzipped (1.3KB minified) and its only
 dependency is [react-resize-aware](https://github.com/FezVrasta/react-resize-aware)
 which weights only 1.2KB gzipped!
 
+## Installation
+
+```
+yarn add react-element-queries
+# or
+npm install --save react-element-queries
+```
+
 ## Usage
 
 It's super easy to use:
