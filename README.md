@@ -51,7 +51,7 @@ make it render its `children` and use the `matches` property as follows:
 
 ```jsx
 import { makeElementQuery } from 'react-element-queries';
-const App = (getRef, children, matches) =>
+const App = ({ getRef, children, matches }) =>
   <div ref={getRef} style={{ color: matches('sm') ? 'yellow' : 'pink' }}>
     <Matches sm>🐣</Matches>
     {children}
@@ -96,6 +96,19 @@ matches('sm') // true if `sm` is matching
 matches('sm', 'lg') // true if `sm` and/or `lg` are matching
 matches({ sm: false }) // true when `sm` isn't matching
 matches({ sm: false }, 'lg') // true when `sm` doesn't match and `lg` does
+```
+
+### `width` and `height` properties
+Since React Element Queries is based on React Resize Aware, you have access to
+the `width` and `height` properties once you have enhanced a component with
+`makeElementQuery`.
+
+```
+const Example = makeElementQuery(
+  ({ getRef, children, width, height, matches }) =>
+    <div ref={getRef}>{children}</div>,
+  { sm: { maxWidth: 300 } }
+);
 ```
 
 # Credits
