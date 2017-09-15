@@ -88,7 +88,7 @@ function makeElementQuery(component, queries) {
             parsedSelectors[arg] = true;
           }
         });
-        console.log(parsedSelectors);
+
         return matches(queries, parsedSelectors, width, height);
       },
       ...props,
