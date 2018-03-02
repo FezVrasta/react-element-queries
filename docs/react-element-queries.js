@@ -157,7 +157,7 @@ function makeElementQuery(component, queries) {
             parsedSelectors[arg] = true;
           }
         });
-        console.log(parsedSelectors);
+
         return _matches(queries, parsedSelectors, width, height);
       }
     }, props));

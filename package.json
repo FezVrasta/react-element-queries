@@ -1,6 +1,6 @@
 {
   "name": "react-element-queries",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Conditionally render pieces of UI based on element queries",
   "main": "dist/index.js",
   "scripts": {
